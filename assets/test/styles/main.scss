@@ -1,0 +1,228 @@
+$blue: #0540F2;
+$black: #000;
+$white: #FFF;
+$gray2: #121212;
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+}
+
+h1 {
+    color: #1A1A1A;
+    text-align: center;
+    font-size: 62px;
+    font-weight: 700;
+    line-height: 130%;
+}
+
+h2 {
+    color: $blue;
+    text-align: center;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 130%; /* 62.4px */
+}
+
+h3 {
+    color: $blue;
+    text-align: center;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 130%; /* 41.6px */
+}
+
+h4 {
+    color: #030F27;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 130%; /* 26px */
+}
+
+p {
+    color: var(--Gray-2, #4F4F4F);
+    text-align: center;
+    line-height: 160%; /* 28.8px */
+}
+
+ul {
+    list-style: none;
+}
+
+.togglefont {
+    font-size: 42px !important;
+}
+
+.btn-main {
+    padding: 12px 24px;
+    border: 1px solid $blue;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: $blue;
+    color: #FFF;
+    transition: 0.3s;
+    font-size: 16px;
+
+    &:hover {
+        background: #0438d4;
+    }
+}
+
+.btn-outline {
+    padding: 12px 24px;
+    border: 1px solid $blue;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: transparent;
+    color: $blue;
+    transition: 0.3s;
+    font-size: 16px;
+
+    &:hover {
+        background: $blue;
+        color: $white;
+    }
+}
+
+// footer
+
+.footer {
+    display: flex;
+    background-color: #030F27;
+    justify-content: center;
+
+    .footer-wrapper {
+        display: flex;
+        width: 1280px;
+        padding: 80px 64px;
+        gap: 64px;
+        flex-direction: column;
+
+        .prefooter {
+            display: flex;
+            justify-content: space-between;
+
+            .left {
+                display: flex;
+                flex-direction: column;
+                gap: 16px;
+
+                .footer-logo {
+                    font-size: 28px;
+                    font-weight: 700;
+                    text-transform: uppercase;
+
+                    a {
+                        text-decoration: none;
+                        color: $blue;
+                    }
+                }
+
+                .footer-links {
+                    display: flex;
+                    gap: 32px;
+
+                    a {
+                        text-decoration: none;
+                        color: #F2F2F2;
+                        transition: 0.3s;
+
+                        &:hover {
+                            color: #c4c4c4;
+                        }
+                    }
+                }
+                .social-media {
+                    display: flex;
+                    gap: 20px;
+
+                    a {
+                        font-size: 24px;
+                        color: #F2F2F2;
+                        transition: 0.2s;
+
+                        &:hover {
+                            color: #c4c4c4;
+                        }
+                    }
+                }
+            }
+
+            .right {
+                color: #FFF;
+                max-width: 420px;
+                display: flex;
+                flex-direction: column;
+                gap: 16px;
+
+                .contact-info {
+                    display: flex;
+                    flex-direction: column;
+
+                    span {
+                        a {
+                            text-decoration: none;
+                            color: #F2F2F2;
+                        }
+                    }
+                }
+            }
+
+        }
+
+        .footer-credits {
+            display: flex;
+            flex-direction: column;
+            gap: 32px;
+
+            .seperater {
+                width: 100%;
+                height: 1px;
+                background: #FFF;
+            }
+            .credits-wrapper {
+                display: flex;
+                justify-content: space-between;
+                color: #F2F2F2;
+
+                .links {
+                    display: flex;
+                    gap: 24px;
+
+                    a {
+                        text-decoration: none;
+                        color: #F2F2F2;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 767.98px) {
+    h2 {
+        font-size: 42px !important;
+    }
+
+    .footer {
+        .footer-wrapper {
+            padding: 32px 16px;
+            .prefooter {
+                flex-direction: column;
+                gap: 32px;
+            }
+            .footer-credits {
+                .credits-wrapper {
+                    flex-direction: column;
+                    gap: 32px;
+                }
+            }
+        }
+    }
+}
